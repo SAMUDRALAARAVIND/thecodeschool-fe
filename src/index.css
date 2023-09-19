@@ -1,0 +1,33 @@
+@import "./styles/colors.scss";
+@import url(./styles/fonts.scss);
+
+body {
+  margin: 0;
+  font-family: globalText;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #151718;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+.scale-transition {
+  cursor: pointer;
+  transition: 0.5s ease-in;
+}
+
+.scale-transition:hover {
+  transform: scale(1.1);
+}
+/* fr-aic */
+.fr-aic {
+  display: flex;
+  align-items: center;
+}
+/* gap 10px */
+.g-10 {
+  gap: 10px;
+}

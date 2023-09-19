@@ -1,0 +1,67 @@
+import { createTheme } from "@uiw/codemirror-themes";
+import { tags as t } from "@lezer/highlight";
+
+export const firaCodeDark = createTheme({
+    theme: "dark",
+    settings: {
+      background: "#101B2D",
+      foreground: "#FFFFFF",
+      caret: "#61AFEE",
+      gutterBorder: "#15222E",
+      selectionMatch: "#036dd626",
+      lineHighlight: "#036dd626",
+      gutterBackground: "#15222E",
+      gutterForeground: "#464E5F",
+      fontFamily: '"Courier New", Courier, monospace',
+    },
+    styles: [
+      { tag: t.comment, color: "#707681" },
+      { tag: t.variableName, color: "#0080ff" },
+      { tag: [t.string, t.special(t.brace)], color: "#9D5BD1" },
+      { tag: t.number, color: "#9D5BD1" },
+      { tag: t.bool, color: "#9D5BD1" },
+      { tag: t.null, color: "#9D5BD1" },
+      { tag: t.keyword, color: "#DC49A6" },
+      { tag: t.operator, color: "#FFFFFF" },
+      { tag: t.className, color: "#3BB178" },
+      { tag: t.definition(t.typeName), color: "#5c6166" },
+      { tag: t.typeName, color: "#5c6166" },
+      { tag: t.angleBracket, color: "#3BB178" },
+      { tag: t.tagName, color: "#3BB178" },
+      { tag: t.attributeName, color: "#E34BA9" },
+      { tag: t.brace, color: "#3BB178" },
+      { tag: t.bracket, color: "#DB4E52" },
+    ],
+  });
+
+export const ExpoTheme =  createTheme({
+  theme: "dark",
+  settings: {
+    background: "#1B1D1E",
+    foreground: "#BF7AF0",
+    caret: "#61AFEE",
+    gutterBorder: "#151718",
+    selectionMatch: "#036dd626",
+    lineHighlight: "#36363989",
+    gutterBackground: "#151718",
+    gutterForeground: "#FFF",
+  },
+  styles: [
+    { tag: t.comment, color: "#707681" },
+    { tag: t.variableName, color: "#ECEDEE" },
+    { tag: [t.string, t.special(t.brace)], color: "#EFC000" },
+    { tag: t.number, color: "#9D5BD1" },
+    { tag: t.bool, color: "#9D5BD1" },
+    { tag: t.null, color: "#9D5BD1" },
+    { tag: t.keyword, color: "#E34BA9" },
+    { tag: t.operator, color: "#FFFFFF" },
+    { tag: t.className, color: "#3BB178" },
+    { tag: t.definition(t.typeName), color: "#5c6166" },
+    { tag: t.typeName, color: "#5c6166" },
+    { tag: t.angleBracket, color: "#687176" },
+    { tag: t.tagName, color: "#3BB178" },
+    { tag: t.attributeName, color: "#E34BA9" },
+    { tag: t.brace, color: "#687176" },
+    { tag: t.bracket, color: "#687176" },
+  ],
+})

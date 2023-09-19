@@ -1,0 +1,37 @@
+@import "../../../styles/colors.scss";
+
+.problem-description-container {
+  overflow-y: scroll;
+  flex-grow: 1;
+  padding: 20px;
+  code {
+    padding: 2px 6px;
+    border-radius: 5px;
+    background-color: $brand-background;
+  }
+  .example {
+    .well {
+      border-left: 2px solid $gray-text;
+      padding-left: 10px;
+      margin-left: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      div {
+        display: flex;
+        gap: 10px;
+        span {
+          color: $gray-text;
+          font-family: codeEditor;
+        }
+      }
+    }
+  }
+  .constraints {
+    ul {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+  }
+}

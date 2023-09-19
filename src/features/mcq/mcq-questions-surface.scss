@@ -1,0 +1,13 @@
+.mcq-questions-surface-container {
+  height: 100vh;
+  .mcq-questions-wrapper {
+    display: grid;
+    grid-template-columns: 8fr 4fr;
+    gap: 10px;
+    height: 100%;
+    .list-container {
+      overflow-y: scroll;
+      max-height: 100%;
+    }
+  }
+}

@@ -1,0 +1,69 @@
+@import "../../../styles/colors.scss";
+
+.root-mcq-question-container {
+  border-radius: 10px;
+  background-color: $expo-light-dark-background;
+  color: $white;
+  padding: 10px 20px;
+  .question-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 2px solid $expo-border;
+    .score-container {
+      display: flex;
+      align-items: center;
+      color: $white;
+      gap: 10px;
+      font-size: 20px;
+      font-weight: 600;
+      background-color: $expo-dark;
+      padding: 10px;
+      border-radius: 4px;
+      div {
+        border: 2px solid $expo-border;
+        padding: 10px 20px;
+        border-radius: 4px;
+      }
+    }
+  }
+  .options-container {
+    .header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    font-size: 18px;
+    .option {
+      padding: 20px;
+      border-radius: 4px;
+      outline: 2px solid $expo-border;
+      cursor: pointer;
+      transition: 0.2s ease-in;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .option:hover,
+    .active-option {
+      background-color: $expo-blue-background;
+      color: $expo-blue-text;
+    }
+    .clear-btn {
+      cursor: pointer;
+      padding: 4px 10px;
+      border: 1px solid $expo-border;
+      border-radius: 4px;
+      transition: all 0.5s;
+    }
+    .clear-btn:hover {
+      transform: scale(1.02);
+    }
+  }
+}
+body {
+  background-color: $expo-light-dark-background;
+}

@@ -1,0 +1,24 @@
+.root-problem-container {
+  display: grid;
+  height: 90vh;
+  gap: 10px;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 10fr 1fr;
+  padding: 4px;
+  .item {
+    background-color: #101b2df1;
+    border-radius: 8px;
+  }
+  .problem-statement-container {
+    grid-column: 1 / 2;
+    grid-row: 1 / 3;
+  }
+  .editor-container {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+  }
+  .options-container {
+    grid-row: 2 / 3;
+    grid-column: 2 / 3;
+  }
+}

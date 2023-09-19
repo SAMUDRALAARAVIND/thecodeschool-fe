@@ -1,0 +1,32 @@
+@import "../../../styles/colors.scss";
+
+.mcq-questions-list-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 10px;
+  .question-card {
+    border-radius: 4px;
+    cursor: pointer;
+    border: 2px solid $expo-border;
+    color: $white;
+    font-weight: 600;
+    display: flex;
+    span {
+      padding: 20px 10px;
+    }
+    .sno {
+      font-weight: 24px;
+      border-right: 2px solid $expo-border;
+      width: 30px;
+      text-align: center;
+    }
+  }
+  .active-card {
+    background-color: $expo-blue-background;
+    color: $expo-blue-text;
+  }
+  .active-card .sno {
+    background-color: $expo-blue-background;
+  }
+}

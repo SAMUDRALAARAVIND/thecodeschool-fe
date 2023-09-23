@@ -281,7 +281,7 @@ export interface ISubTopicState {
     subTopicIndex: number
 }
 
-class NotesModel {
+export class NotesModel {
     obs: ObservableObject<ISubTopicState>;
 
     constructor(){

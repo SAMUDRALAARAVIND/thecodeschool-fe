@@ -1,4 +1,5 @@
 PAT: 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
+PAT_NEW: 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
 
 git remote add origin https://<TOKEN>@github.com/<USERNAME>/<REPO>.git
 

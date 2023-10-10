@@ -1,0 +1,19 @@
+PAT: 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
+
+git remote add origin https://<TOKEN>@github.com/<USERNAME>/<REPO>.git
+
+git remote add origin https://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@github.com/SAMUDRALAARAVIND/thecodeschool-fe.git
+
+
+STEPS TO USE PAT(Personal Access Token): 
+
+1. create a local repo 
+2. set up config
+    git config --global user.name "username"
+    git config --global user.email "email"
+
+    Ensure to not use `=` in the above two commands.
+3. Generate PAT from github.com by 
+    profile-bar > settings > developer settings > PAT
+4. set remote origin `git remote add origin https://<TOKEN>@github.com/<USERNAME>/<REPO>.git`
+5. commit and push

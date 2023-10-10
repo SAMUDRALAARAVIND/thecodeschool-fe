@@ -5,6 +5,8 @@ git remote add origin https://<TOKEN>@github.com/<USERNAME>/<REPO>.git
 
 git remote add origin https://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@github.com/SAMUDRALAARAVIND/thecodeschool-fe.git
 
+git remote set-url origin https://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@github.com/SAMUDRALAARAVIND/thecodeschool-fe.git
+
 
 STEPS TO USE PAT(Personal Access Token): 
 

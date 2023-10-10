@@ -11,6 +11,7 @@ interface Props {
   height?: string;
   theme?: Extension;
   editable?: boolean;
+  hideLineNumbers?: boolean;
 }
 
 export const CodeSchoolEditor: React.FC<Props> = ({
@@ -18,9 +19,10 @@ export const CodeSchoolEditor: React.FC<Props> = ({
   width,
   height,
   theme,
+  hideLineNumbers,
   ...props
 }) => {
-  const [fontSize, setFontSize] = useState(20);
+  const [fontSize, setFontSize] = useState(16);
 
   const onKeyDown = (e: any) => {
     if ((e.key === "=" || e.key === "+") && (e.metaKey || e.ctrlKey)) {
@@ -45,7 +47,9 @@ export const CodeSchoolEditor: React.FC<Props> = ({
         caretColor: "red",
       }}
       onKeyDown={onKeyDown}
-      className="editor-container"
+      className={`editor-container ${
+        hideLineNumbers ? "hide-line-numbers" : ""
+      }`}
       {...props}
     />
   );

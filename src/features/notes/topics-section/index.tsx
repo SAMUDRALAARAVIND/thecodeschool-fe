@@ -1,6 +1,6 @@
 import { TopicsList } from "../notes-model";
 import ChevronRightIcon from "@mui/icons-material/ChevronRight";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 import { ISubTopicState } from "../notes-model";
 
@@ -33,6 +33,30 @@ export const TopicsSection: React.FC<Props> = ({ updateContentSection }) => {
     setActiveSubTopicIndex(state);
     updateContentSection(state);
   };
+
+  useEffect(() => {
+    const scrollSmooth = function (e) {
+      e.preventDefault();
+      const targetId = this.getAttribute("href").substring(1);
+      const targetElement = document.getElementById(targetId);
+
+      if (targetElement) {
+        targetElement.scrollIntoView({ behavior: "smooth" });
+      }
+    };
+
+    const anchorEvent = (anchor) => {
+      anchor.addEventListener("click", scrollSmooth);
+    };
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchorEvent);
+
+    return () => {
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.removeEventListener("click", scrollSmooth);
+      });
+    };
+  }, []);
 
   return (
     <>

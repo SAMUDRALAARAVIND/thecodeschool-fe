@@ -3,8 +3,9 @@
 .root-notes-container {
   height: 92vh;
   display: grid;
-  grid-template-columns: 4fr 12fr;
+  grid-template-columns: 4fr 13fr;
   gap: 20px;
+  background-color: #23272f;
   .topics-container {
     max-height: 100%;
     overflow-y: scroll;
@@ -14,12 +15,12 @@
       color: $expo-blue-text !important;
     }
     .list-item {
-      color: $expo-border;
+      color: $color-9BA1A5;
       margin: 10px 0;
       display: flex;
       flex-direction: column;
       .title {
-        font-size: 18px;
+        font-size: 16px;
         font-weight: 600;
       }
       .title-container {
@@ -30,9 +31,6 @@
         border-radius: 10px;
         transition: 0.8s;
       }
-      .title-container:hover {
-        background-color: #191d1e;
-      }
       .sub-topics-list {
         padding: 20px 10px;
         display: flex;
@@ -40,9 +38,10 @@
         margin-left: 40px;
         a {
           text-decoration: none;
-          color: $expo-border;
+          color: $color-9BA1A5;
           border-left: 3px solid $expo-border;
           padding: 10px 0 10px 20px;
+          font-size: 14px;
         }
         a.active-sub-topic {
           color: $expo-blue-text !important;
@@ -56,7 +55,78 @@
   }
   .content-container {
     max-height: 100%;
+    margin-right: 10px;
     overflow-y: scroll;
     padding: 10px;
+    .notes-content-body {
+      color: #ecedee;
+      // this is the container item for the content body
+      ul,
+      ol {
+        li {
+          margin: 10px 0;
+          line-height: 24px;
+        }
+      }
+      p {
+        line-height: 24px;
+      }
+      h1 {
+        padding: 20px 0;
+        border-bottom: 1px solid $color-9BA1A5;
+      }
+      h2 {
+        // color: $color-e34ba9;
+        color: #84a0ef;
+      }
+      .code {
+        background-color: $notes-background;
+        border-radius: 2px;
+        padding: 1px 6px;
+        color: #ecedee;
+        margin: 5px;
+        font-family: codeEditor;
+        color: $code-text;
+      }
+      .section {
+        background-color: #35363780;
+        border-radius: 20px;
+        margin: 30px 0;
+        padding: 20px;
+      }
+      .table {
+        width: 100%;
+        border-radius: 10px;
+        overflow: hidden;
+        border-collapse: collapse;
+        border: 0.1px solid $expo-border;
+        .row-head {
+          background-color: $color-292c31 !important;
+        }
+        td,
+        th {
+          padding: 10px;
+          border: 1px solid $expo-border;
+          line-height: 28px;
+        }
+        tr:nth-child(2n) {
+          background-color: $color-292c31;
+        }
+        tr:nth-child(2n + 1) {
+          background-color: $color-222529;
+        }
+        .code-cell {
+          padding: 0;
+        }
+      }
+      .horizantal-list {
+        display: flex;
+        gap: 20px;
+        flex-wrap: wrap;
+        li {
+          line-height: 10px;
+        }
+      }
+    }
   }
 }

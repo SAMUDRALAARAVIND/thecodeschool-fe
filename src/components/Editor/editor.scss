@@ -3,3 +3,12 @@
     font-family: codeEditor;
   }
 }
+.hide-line-numbers {
+  .cm-editor {
+    padding: 20px;
+    border-radius: 10px;
+  }
+  .cm-gutters {
+    display: none;
+  }
+}

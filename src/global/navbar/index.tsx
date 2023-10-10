@@ -5,7 +5,7 @@ import { NavLink } from "react-router-dom";
 export const NavBar = () => {
   return (
     <div className="root-navbar-container g-10">
-      <NavLink
+      {/* <NavLink
         to={"/home"}
         className={({ isActive }) => {
           isActive && (document.title = "TheCodeSchool");
@@ -13,7 +13,7 @@ export const NavBar = () => {
         }}
       >
         Home
-      </NavLink>
+      </NavLink> */}
       <NavLink
         to={"/notes"}
         className={({ isActive }) => {
@@ -32,7 +32,7 @@ export const NavBar = () => {
       >
         MCQ Questions
       </NavLink>
-      <NavLink
+      {/* <NavLink
         to={"/problem/2929020"}
         className={({ isActive }) => {
           isActive && (document.title = "Solve Problem");
@@ -40,7 +40,7 @@ export const NavBar = () => {
         }}
       >
         Problems
-      </NavLink>
+      </NavLink> */}
     </div>
   );
 };

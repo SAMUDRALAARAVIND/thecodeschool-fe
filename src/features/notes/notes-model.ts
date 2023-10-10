@@ -1,6 +1,8 @@
 import React from "react";
 import { NotFound } from "../../components/not-found/NotFound";
 import {ObservableObject, observable} from '@legendapp/state';
+import { BasicsOfJavaScript } from "./content/basics-of-js";
+import { Functions } from "./content/functions";
 
 interface ISubTopic {
     subTopicName: string;
@@ -34,7 +36,7 @@ export const TopicsList: ITopic[] = [
                 id: 'loops'
             }
         ],
-        Component:NotFound
+        Component:BasicsOfJavaScript
     },
     {
         topicName: 'Functions',
@@ -60,7 +62,7 @@ export const TopicsList: ITopic[] = [
                 id: 'hoisting'
             }
         ],
-        Component:NotFound
+        Component:Functions
     },
     {
         topicName: 'Scope Chain & Closures',

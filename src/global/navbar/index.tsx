@@ -15,15 +15,15 @@ export const NavBar = () => {
         Home
       </NavLink> */}
       <NavLink
-        to={"/notes"}
+        to={"/"}
         className={({ isActive }) => {
-          isActive && (document.title = "Notes");
+          isActive && (document.title = "JavaScript Notes");
           return `link ${isActive ? "active-link" : ""}`;
         }}
       >
-        Notes
+        JavaScript Notes
       </NavLink>
-      <NavLink
+      {/* <NavLink
         to={"/mcq-question/38992"}
         className={({ isActive }) => {
           isActive && (document.title = "Mcq Questions");
@@ -31,7 +31,7 @@ export const NavBar = () => {
         }}
       >
         MCQ Questions
-      </NavLink>
+      </NavLink> */}
       {/* <NavLink
         to={"/problem/2929020"}
         className={({ isActive }) => {

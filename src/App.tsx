@@ -12,13 +12,13 @@ function App() {
     <BrowserRouter>
       <NavBar />
       <Routes>
-        <Route Component={() => null} path="/home" />
-        <Route
+        <Route Component={NotesHome} path={"/"} />
+        {/* <Route Component={() => null} path="/home" /> */}
+        {/* <Route
           Component={McqQuestionsSurface}
           path={"/mcq-question/:questionId"}
-        />
-        <Route Component={NotesHome} path={"/notes"} />
-        <Route Component={ProblemContainer} path="/problem/:problemId" />
+        /> */}
+        {/* <Route Component={ProblemContainer} path="/problem/:problemId" /> */}
       </Routes>
     </BrowserRouter>
   );

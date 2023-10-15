@@ -521,7 +521,7 @@ export const Functions = () => {
             </li>
             <li>
               During the creation phase, variables will be initialized with
-              specific values:
+              specific values, as shown below.
             </li>
           </ul>
 
@@ -537,20 +537,59 @@ export const Functions = () => {
             </thead>
             <tbody>
               <tr>
-                <td className="code">
-                  unavailable : variable gets created but no data be assigned.
+                <td>
+                  <span className="code">unavailable</span> : variable gets
+                  created but no data be assigned.
                 </td>
-                <td className="code">
-                  unavailable : variable gets created but no data be assigned.
+                <td>
+                  <span className="code">unavailable</span> : variable gets
+                  created but no data be assigned.
                 </td>
-                <td className="code">undefined</td>
-                <td className="code">actual function value</td>
-                <td className="code">
-                  unavailable : variable gets created but no data be assigned.
+                <td>
+                  <span className="code">undefined</span>
+                </td>
+                <td>
+                  <span className="code">actual function value</span>
+                </td>
+                <td>
+                  <span className="code">unavailable</span> : variable gets
+                  created but no data be assigned.
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  Can not be accessed before intialisation statement executes as
+                  it will be inside the
+                  <span className="code">Temporal Dead Zone (TDZ)</span>
+                </td>
+                <td>
+                  Can not be accessed before intialisation statement executes as
+                  it will be inside the
+                  <span className="code">Temporal Dead Zone (TDZ)</span>
+                </td>
+                <td>
+                  Can be accessed before the intialisation, But it will have
+                  <span className="code">undefined</span> value before
+                  intialisation statement executes.
+                </td>
+                <td>
+                  Can be accessed before intialisation with the actual value as
+                  this value gets hoisted fully during the creation phase
+                  itself.
+                </td>
+                <td>
+                  Can not be accessed before intialisation statement executes as
+                  it will be inside the
+                  <span className="code">Temporal Dead Zone(TDZ)</span>.
                 </td>
               </tr>
             </tbody>
           </table>
+
+          <ReadEditor
+            value={functionsCodeSnippets.hoisting_let.code}
+            height={functionsCodeSnippets.hoisting_let.height}
+          />
         </div>
       </div>
     </section>

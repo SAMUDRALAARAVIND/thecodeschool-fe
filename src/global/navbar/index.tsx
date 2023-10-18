@@ -2,6 +2,11 @@ import React from "react";
 import "./index.scss";
 import { NavLink } from "react-router-dom";
 
+const classNameGenerator =  ({ isActive }) => {
+  isActive && (document.title = "JavaScript Notes");
+  return `link ${isActive ? "active-link" : ""}`;
+}
+
 export const NavBar = () => {
   return (
     <div className="root-navbar-container g-10">
@@ -14,12 +19,13 @@ export const NavBar = () => {
       >
         Home
       </NavLink> */}
+      <NavLink 
+        to="/"
+        className={classNameGenerator}
+      >Home</NavLink>
       <NavLink
-        to={"/"}
-        className={({ isActive }) => {
-          isActive && (document.title = "JavaScript Notes");
-          return `link ${isActive ? "active-link" : ""}`;
-        }}
+        to={"/javascript-notes"}
+        className={classNameGenerator}
       >
         JavaScript Notes
       </NavLink>

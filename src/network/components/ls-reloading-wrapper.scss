@@ -1,0 +1,35 @@
+.loading-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 200px;
+    .bubble {
+        width: 10px;
+        height: 10px;
+        background-color: #3498db;
+        border-radius: 50%;
+        margin: 0 5px;
+        animation: bubble-scale 1s infinite ease-in-out;
+    }
+
+    .bubble1 {
+        animation-delay: 0s;
+    }
+
+    .bubble2 {
+        animation-delay: 0.5s; 
+    }
+
+    .bubble3 {
+        animation-delay: 1s;
+    }
+}
+
+@keyframes bubble-scale {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.3);
+    }
+}

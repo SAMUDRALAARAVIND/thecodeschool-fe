@@ -4,6 +4,7 @@ import { LSReloadingWrapper } from "../../network/components/LSReloadingWrapper"
 import { CoursesList } from "./ls-components/CoursesList";
 import { ApplyNow } from "./ApplyNow";
 import { InStructorTestimonials } from "./ls-components/InStructorTestimonials";
+import { PlacementEssentials } from "./components/PlacementEssentials";
 
 export const Home = () => {
   const homeScreenModel = useRef(createHomeScreenModel()).current;
@@ -23,6 +24,7 @@ export const Home = () => {
 
   return (
     <div>
+      <PlacementEssentials />
       <LSReloadingWrapper
         apiStatusViews$={homeScreenModel.views_courses}
         onReload={fetchCourses}

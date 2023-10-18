@@ -8,6 +8,7 @@ import SchoolOutlinedIcon from '@mui/icons-material/SchoolOutlined';
 import { ICourseItem } from "../home-types";
 import "../styles/course-list.scss";
 import { applyNowModel } from "../apply-now-model";
+import ChevronRightIcon from '@mui/icons-material/ChevronRight';
 
 interface Props {
   coursesList$: ObservableObject<ICourseItem[]>;
@@ -46,19 +47,23 @@ export const CoursesList: React.FC<Props> = observer(({ coursesList$ }) => {
                   <SchoolOutlinedIcon />
                   <b>Curriculum</b>
                 </div>
-                <div className="fc g-10">
+                <div className="fc g-10 curriculum-points">
                   {course?.curriculumPoints?.map((point, index) => {
                     return (
-                      <div className="fr-aic g-10" key={index}>
-                        <CheckCircleOutlineOutlinedIcon style={{color: 'green'}} />
+                      <div className="fr-aic g-10 point" key={index}>
+                        <CheckCircleOutlineOutlinedIcon />
                         <span>{point}</span>
                       </div>
                     );
                   })}
                 </div>
               </div>
-              <div className="footer">
-                <button className="btn-apply" onClick={toggleApplyNowModal}>Apply Now</button>
+              <div className="footer fr-aic jc-sb g-10">
+                <button className="btn-apply" onClick={toggleApplyNowModal}>Get a callback</button>
+                <button className="btn-apply fr-aic jc-c g-10" onClick={toggleApplyNowModal}>
+                  <span>Learn More</span>
+                  <ChevronRightIcon style={{fontSize: "16px"}}/>
+                </button>
               </div>
             </div>
           );

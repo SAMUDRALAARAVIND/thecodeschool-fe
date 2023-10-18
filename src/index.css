@@ -31,6 +31,9 @@ code {
 .jc-sb{
   justify-content: space-between;
 }
+.jc-c{
+  justify-content: center;
+}
 .fc {
   display: flex;
   flex-direction: column;
@@ -38,6 +41,13 @@ code {
 /* gap 10px */
 .g-10 {
   gap: 10px;
+}
+.gradient-text{
+  background-image: linear-gradient(to right, red, blue);
+  -webkit-background-clip: text;
+  color: transparent;
+  font-weight: 900;
+  font-family: largeText;
 }
 
 *::-webkit-scrollbar {

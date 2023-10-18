@@ -3,14 +3,14 @@
 .our-courses {
     background-color: $white;
     padding: 50px;
-    background-image: linear-gradient(to right, #B3E4FB, #fff);
   .section-title{
     text-align: center;
     background-image: linear-gradient(to right, red, blue);
     -webkit-background-clip: text;
     color: transparent;
     font-weight: 900;
-    font-size: 40px;
+    font-size: 60px;
+    font-family: largeText;
     margin: 50px 0;
   }
   .courses {
@@ -23,15 +23,19 @@
       max-width: 400px;
       background-color: #fff;
       position: relative;
+      box-shadow: 2px 2px 5px $color-ededed;
       border-radius: 10px;
       .header {
         padding: 20px;
         border-radius: 10px 10px 0 0;
-        background-color: #935ef64d;
+        background-color: $expo-blue-text;
+        color: $expo-blue-background;
+        font-family: largeText;
+        font-size: 20px;
         .badge {
           position: absolute;
           top: -20px;
-          background-color: #935ef6;
+          background-color: $expo-blue-background;
           color: $white;
           padding: 10px 6px;
           border-radius: 4px;
@@ -48,18 +52,20 @@
         .chips {
           .chip {
             font-size: 12px;
-            background-color: #935ef641;
-            color: #935ef6;
-            padding: 5px;
+            background-color: $expo-blue-background;
+            color: $white;
+            padding: 5px 10px;
             border-radius: 4px;
           }
         }
         .title {
           margin: 20px 0;
         }
-        .curriculm-points {
-          display: flex;
-          flex-direction: column;
+        .curriculum-points {
+          .point {  
+            color :$expo-blue-background;
+            font-size: 14px;
+          }
         }
       }
       .footer {
@@ -67,11 +73,10 @@
         padding: 20px;
         .btn-apply {
           border: none;
-          background-color: #935ef6;
+          background-color: $expo-blue-background;
           color: white;
           padding: 10px;
           border-radius: 5px;
-          display: block;
           flex-grow: 1;
           cursor: pointer;
           transition: 0.4s;

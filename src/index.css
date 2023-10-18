@@ -26,6 +26,14 @@ code {
 .fr-aic {
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
+}
+.jc-sb{
+  justify-content: space-between;
+}
+.fc {
+  display: flex;
+  flex-direction: column;
 }
 /* gap 10px */
 .g-10 {

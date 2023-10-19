@@ -20,3 +20,5 @@ STEPS TO USE PAT(Personal Access Token):
     profile-bar > settings > developer settings > PAT
 4. set remote origin `git remote add origin https://<TOKEN>@github.com/<USERNAME>/<REPO>.git`
 5. commit and push
+
+minor change for git login verification.

@@ -28,13 +28,15 @@ export const CoursesList: React.FC<Props> = observer(({ coursesList$ }) => {
         {coursesList?.map?.((course) => {
           return (
             <div className="course-item" key={course.courseId}>
-              <div className="header fr-aic g-10">
+              <div className="header fr-aic g-10" style={{backgroundImage: `url(${course.imageUrl})`}}>
                 <b className="badge">{course.courseType}</b>
-                <BookmarksIcon />
-                <h4>{course.courseName}</h4>
               </div>
               <div className="body">
                 <div className="body-top">
+                  <div className="fr-aic g-10">
+                      <BookmarksIcon />
+                    <h4>{course.courseName}</h4>
+                  </div>
                   <div className="chips fr-aic">
                     <div className="chip fr-aic g-10">
                       <AlarmOnIcon />

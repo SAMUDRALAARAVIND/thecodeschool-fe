@@ -20,19 +20,23 @@
     gap: 40px;
     padding: 20px 0;
     .course-item {
-      max-width: 400px;
+      width: min(400px, 90vw);
       background-color: #fff;
       position: relative;
       box-shadow: 2px 2px 5px $color-ededed;
       border-radius: 10px;
       .header {
+        height: 100px;
         padding: 20px;
         border-radius: 10px 10px 0 0;
         background-color: $expo-blue-text;
         color: $expo-blue-background;
         font-family: largeText;
         font-size: 20px;
+        background-repeat: no-repeat;
+        background-size: cover;
         .badge {
+          border: 1px solid #ededed;
           position: absolute;
           top: -20px;
           background-color: $expo-blue-background;

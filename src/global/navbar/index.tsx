@@ -19,10 +19,10 @@ export const NavBar = () => {
       >
         Home
       </NavLink> */}
-      <NavLink 
+      {/* <NavLink 
         to="/"
         className={classNameGenerator}
-      >Home</NavLink>
+      >Home</NavLink> */}
       <NavLink
         to={"/javascript-notes"}
         className={classNameGenerator}

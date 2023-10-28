@@ -14,7 +14,7 @@ function App() {
     <BrowserRouter>
       <NavBar />
       <Routes>
-        <Route Component={Home} path="/" />
+        {/* <Route Component={Home} path="/" /> */}
         <Route Component={NotesHome} path={"/javascript-notes"} />
         {/* <Route Component={() => null} path="/home" /> */}
         {/* <Route
